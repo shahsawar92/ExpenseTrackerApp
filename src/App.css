@@ -1,38 +1,191 @@
-.App {
+html{
+margin: 0;
+padding: 0;
+}
+
+body{
+background-color: #f5f5f5;
+display: flex;
+flex-direction: column;
+min-height: 0vh;
+justify-content: center;
+align-items: center;
+font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+padding: 0;
+}
+.container{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  /* width: 300px;
+  height: 100px; */
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.sum{
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 2px 2px 3px #bbb;
+  text-transform: uppercase;
+  text-align: center;
+}
+.sum > div{
+  flex:2px;
+  text-align: center;
+  
+}
+.money{
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.money.plus{
+  color: #2ecc71;
+}
+
+.money.minus{
+  color: #c0392b;
+}
+.history h3{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.history .history-underline{
+  width: 100px;
+  height: 4px;
+  background-color: #bbb;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.history .history-list{
+  list-style: none;
+  font-size: 20px;
+  margin-right: 40px;
+  overflow-y: scroll;
+  padding: 20px;
+  height: 200px;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.history .history-list li{
+  margin-bottom: 10px;
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  display: block;
+}
+
+.history .history-list .item-plus{
+  border-right: 4px solid #2ecc71;
+}
+
+.history .history-list .item-minus{
+  border-right: 4px solid #c0392b;
+}
+
+.history .history-list li small{
+  font-size: 12px;
+  display: block;
+  color: #777;
+  margin-top: 5px;
+}
+
+
+.history .history-list li span{
+  float: right;
+  margin-right: 4px;
+  transform: translate(0%, -170%);
+}
+
+.history .history-list li button{
+  float: left;
+  opacity: 0;
+  background-color: #c0392b;
   color: white;
+  border: none;
+  margin-right: 20px;
+  font-weight: 600;
+  transform: translate(-110%, -150%);
 }
 
-.App-link {
-  color: #61dafb;
+.history .history-list li:hover button{
+  opacity: 1;
+  transition: ease-in 0.4s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text, .amount{
+  display: block;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 500;
 }
+.sum > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+
+.sum .inc-container,
+.sum .exp-container
+{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.sum .inc-container h4{
+  text-align: center;
+}
+
+input[type="text"],
+input[type="number"]{
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+  width: 98%;
+}
+
+.income-btn{
+  padding: 10px;
+  width: 49%;
+  font-size: 20px;
+  background-color: #2ecc71;
+  color: white;
+  border-radius: 20px;
+  border: none;
+}
+
+.income-btn:hover{
+  box-shadow: 3px 3px 2px #2ecc71;
+  transition: ease-in-out 0.2s;
+}
+
+.expense-btn{
+  padding: 10px;
+  width: 49%;
+  font-size: 20px;
+  float: right;
+  background-color: #c0392b;
+  border-radius: 20px;
+  color: white;
+  border: none;
+}
+
+.expense-btn:hover{
+  box-shadow: 3px 3px 2px #c0392b;
+  transition: ease-in-out 0.2s;
+}
+
+@media(max-width: 529px){
+  .history .history-list li button{
+    opacity: 1;
+  }
+} 
