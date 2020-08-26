@@ -1,14 +1,21 @@
-import React from 'react';
-
+import React,{useContext} from 'react';
+import {useContexts} from '../mycontext/usecontext';
+import Each from './eachtrans';
 
 function Trans(){
-  return( <div>
-    <h3>Transaction History </h3>
-    <ul ClassName=" list">
-        <li ClassName="plus">oriject 1 income</li>
-        <li ClassName="minus">project 1 expences</li>
-    </ul>
-  
-  </div> );
+  const {transactions}= useContext(useContexts)
+  console.log(transactions);
+  return( <div className="history history-underline">
+  <h3>Transaction history</h3>
+  <ul className="history-list history-underline">
+    {transactions.map(transactions =>(
+    <Each key={
+      transactions.id
+    } transactions={transactions} /> 
+    )
+    ) 
+    }
+  </ul>
+</div> );
 }
- export default Trans;
+ export default Trans;  

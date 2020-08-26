@@ -21,7 +21,7 @@ padding: 0;
   width: 40%;
   /* width: 300px;
   height: 100px; */
-  border: 1px solid black;
+  /* border: 1px solid black; */
   box-sizing: border-box;
 }
 
@@ -61,9 +61,9 @@ padding: 0;
 }
 
 .history .history-underline{
-  width: 100px;
+  width: 40%;
   height: 4px;
-  background-color: #bbb;
+ 
   margin: 0 auto;
 }
 
@@ -73,8 +73,9 @@ padding: 0;
   margin-right: 40px;
   overflow-y: scroll;
   padding: 20px;
-  height: 200px;
+  height: auto;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .history .history-list li{
@@ -84,28 +85,36 @@ padding: 0;
   padding-top: 5px;
   display: block;
 }
+.item-plus:hover{
+  background: green;
+}
 
+.item-minus:hover{
+  background:red;
+}
+.item-plus> span{
+  float: right;
+}
+.item-minus> span{
+  float: right;
+}
 .history .history-list .item-plus{
   border-right: 4px solid #2ecc71;
 }
 
+
 .history .history-list .item-minus{
   border-right: 4px solid #c0392b;
+  
 }
 
-.history .history-list li small{
+.history .history-list li span{
   font-size: 12px;
   display: block;
-  color: #777;
+  color: indigo;
   margin-top: 5px;
 }
 
-
-.history .history-list li span{
-  float: right;
-  margin-right: 4px;
-  transform: translate(0%, -170%);
-}
 
 .history .history-list li button{
   float: left;
@@ -113,9 +122,9 @@ padding: 0;
   background-color: #c0392b;
   color: white;
   border: none;
-  margin-right: 20px;
+
   font-weight: 600;
-  transform: translate(-110%, -150%);
+  transform: translate(-110%, -160%);
 }
 
 .history .history-list li:hover button{
@@ -123,69 +132,21 @@ padding: 0;
   transition: ease-in 0.4s;
 }
 
-.text, .amount{
-  display: block;
-  margin-bottom: 5px;
-  font-size: 20px;
-  font-weight: 500;
-}
-.sum > div:first-of-type {
-  border-right: 1px solid #dedede;
-}
-
-
-.sum .inc-container,
-.sum .exp-container
-{
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.sum .inc-container h4{
-  text-align: center;
-}
-
 input[type="text"],
 input[type="number"]{
   display: block;
   font-size: 20px;
   margin-bottom: 10px;
-  width: 98%;
+  width: 100% ;
+  
 }
-
-.income-btn{
-  padding: 10px;
-  width: 49%;
-  font-size: 20px;
-  background-color: #2ecc71;
-  color: white;
-  border-radius: 20px;
-  border: none;
+.btn{
+  width: 103%;
+  margin-bottom: 10px;
+  height: 30px;
+  color: #fff;
+  background-color: indigo;
 }
-
-.income-btn:hover{
-  box-shadow: 3px 3px 2px #2ecc71;
-  transition: ease-in-out 0.2s;
+h3{
+  text-align: center;
 }
-
-.expense-btn{
-  padding: 10px;
-  width: 49%;
-  font-size: 20px;
-  float: right;
-  background-color: #c0392b;
-  border-radius: 20px;
-  color: white;
-  border: none;
-}
-
-.expense-btn:hover{
-  box-shadow: 3px 3px 2px #c0392b;
-  transition: ease-in-out 0.2s;
-}
-
-@media(max-width: 529px){
-  .history .history-list li button{
-    opacity: 1;
-  }
-} 
