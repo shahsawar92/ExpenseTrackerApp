@@ -1,8 +1,14 @@
 import React from 'react';
-
+import { useContext } from 'react';
+import {useContexts } from '../mycontext/usecontext';
 function Bal(){
-  return( <div>
-    <h2>current balance:<span>$1,000</span></h2>
+  const { transactions } = useContext(useContexts);
+
+    const amounts = transactions.map(transaction => transaction.money);
+    const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
+
+  return( <div  className="container">
+    <h2>current balance:<span>{total}</span></h2>
     
   </div> );
 }

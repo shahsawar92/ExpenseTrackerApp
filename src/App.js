@@ -13,12 +13,11 @@ function App(){
   return( 
     <Globalprovider>
   <div>
-    <Head></Head>
-    <div className="container"> <Bal />
-    </div>
+    <Head />
+    <Bal />
     <Sum />
     <Trans />
-    <Form></Form>
+    <Form />
   </div> 
     </Globalprovider>
   );
