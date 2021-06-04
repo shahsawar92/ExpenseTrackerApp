@@ -7,8 +7,8 @@ function Bal(){
     const amounts = transactions.map(transaction => transaction.money);
     const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
 
-  return( <div  className="container">
-    <h2>current balance:<span>{total}</span></h2>
+  return( <div  className="container1">
+    <h2>Current Balance:<span>{total}</span></h2>
     
   </div> );
 }

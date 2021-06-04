@@ -15,10 +15,10 @@ function Sum(){
   ).toFixed(2);
   
   return( <div className="sum">
-    <div><h4>income</h4>
+    <div><h4 className="colr">income</h4>
     <p className="money plus">{income}</p>
     </div> 
-    <div><h4>expence</h4>
+    <div><h4 className="colr">expence</h4>
   <p className="money minus">{expense}</p>
     </div>
   </div> );
